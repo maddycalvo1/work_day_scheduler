@@ -1,6 +1,6 @@
 ## Description
 
-The goal was to create a calendat application that would allow the user to save any events of their chouxe for each hour of the day. 
+The goal was to create a calendar application that would allow the user to save any events of their chouxe for each hour of the day. 
 
 ## Features
 
@@ -16,7 +16,7 @@ Some features included are:
 
 - How I displayed the current time:
 
-let currentTime = moment().hour();
+//let currentTime = moment().hour();
 
 function currentTimeNow() {
     let currentDisplay = moment().format("MMMM Do YYYY, h:mm:ss a");
@@ -27,14 +27,14 @@ setInterval(currentTimeNow, 1000);
 
 - Local storage function:
 
-let getLocal = localStorage.getItem("availableTime");
+//let getLocal = localStorage.getItem("availableTime");
 if (getLocal) {
     availableTime = JSON.parse(getLocal);
 
 
 - How the time blocks change color according to the time
 
-$.each($(".time-block"), function(index, value) {
+//$.each($(".time-block"), function(index, value) {
     let eventInput = parseInt($(value).attr("data-time"));    
  
     if (eventInput == currentTime) {
@@ -57,7 +57,7 @@ $(".time-block").each(function() {
 
 - When the user clicks the button, how the event saves 
 
-$(".saveBtn").on("click", function(event){
+//$(".saveBtn").on("click", function(event){
     event.preventDefault();
 
     var timeValue = $(this).closest(".time-block").attr("data-time");
